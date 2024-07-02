@@ -23,29 +23,25 @@ describe('Generic Test Suite', function() {
       const features = getImplementationFeatures(i.name);
       console.log(`Features for ${i.name}:`, JSON.stringify(features, null, 2));
 
-      for (const [testName, tests] of Object.entries(GenericTestMapping)) {
-        describe(testName, function() {
-          for (const test of tests) {
-            const requiredFeature = test.config.check;
+      for (const [testName, testConfig] of Object.entries(GenericTestMapping)) {
+        const requiredFeature = testConfig.config.check;
 
-            it(test.description, async function() {
-              if (!features[requiredFeature]) {
-                console.log(`Skipping test "${test.description}" for ${i.name} due to missing feature: ${requiredFeature}`);
-                this.skip();
-                return;
-              }
-
-              console.log(`Running test: ${test.description} for implementation: ${i.name}`);
-              await generateTestResults(i.name, testName);
-              this.test.cell = {columnId: i.name, rowId: `${testName} - ${test.description}`};
-              const result = await checkTestResults(i.name, test);
-              console.log(`Test result for ${i.name} - ${testName} - ${test.description}: ${result}`);
-              should.equal(result, test.expected_result);
-
-              // Log the test result in a format that matches the report generator's expectations
-              console.log(`Reporter data: ${this.test.cell.columnId},${this.test.cell.rowId},${result}`);
-            });
+        it(testName, async function() {
+          if (!features[requiredFeature]) {
+            console.log(`Skipping test "${testName}" for ${i.name} due to missing feature: ${requiredFeature}`);
+            this.skip();
+            return;
           }
+
+          console.log(`Running test: ${testName} for implementation: ${i.name}`);
+          await generateTestResults(i.name, testConfig);
+          this.test.cell = {columnId: i.name, rowId: testName};
+          const result = await checkTestResults(i.name, testConfig);
+          console.log(`Test result for ${i.name} - ${testName}: ${result}`);
+          should.equal(result, testConfig.expected_result);
+
+          // Log the test result in a format that matches the report generator's expectations
+          console.log(`Reporter data: ${this.test.cell.columnId},${this.test.cell.rowId},${result}`);
         });
       }
     });
