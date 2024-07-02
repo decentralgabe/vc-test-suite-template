@@ -1,10 +1,10 @@
 {
-  "shortName": "vc-json-schema-test-suite",
+  "shortName": "vc-test-suite-template",
   "group": "vc",
   "specStatus": "NOTE",
-  "subtitle": "Verifiable Credentials JSON Schema Interoperability Report",
-  "github": "https://github.com/w3c/vc-json-schema-test-suite",
-  "edDraftURI": "https://w3c.github.io/vc-json-schema-test-suite/",
+  "subtitle": "Verifiable Credentials Test Suite Template Interoperability Report",
+  "github": "https://github.com/w3c/vc-test-suite-template",
+  "edDraftURI": "https://w3c.github.io/vc-test-suite-template/",
   "doJsonLd": true,
   "includePermalinks": false,
   "otherLinks": [
@@ -14,10 +14,6 @@
         {
           "value": "The Verifiable Credentials Data Model v2.0",
           "href": "https://www.w3.org/TR/vc-data-model-2.0/"
-        },
-        {
-          "value": "Verifiable Credentials JSON Schema Specification",
-          "href": "https://www.w3.org/TR/vc-json-schema/"
         }
       ]
     }
@@ -28,18 +24,6 @@
       "url": "https://github.com/decentralgabe",
       "company": "Block",
       "companyURL": "https://www.tbd.website/"
-    },
-    {
-      "name": "Orie Steele",
-      "url": "https://github.com/OR13",
-      "company": "Transmute",
-      "companyURL": "https://transmute.industries/"
-    },
-    {
-      "name": "Andres Uribe",
-      "url": "https://github.com/andresuribe",
-      "company": "Block",
-      "companyURL": "https://www.tbd.website/"
     }
   ],
   "authors": [
@@ -48,12 +32,6 @@
       "url": "https://github.com/decentralgabe",
       "company": "Block",
       "companyURL": "https://www.tbd.website/"
-    },
-    {
-      "name": "Orie Steele",
-      "url": "https://github.com/OR13",
-      "company": "Transmute",
-      "companyURL": "https://transmute.industries/"
     }
   ]
 }

@@ -1,25 +1,39 @@
-# TBD's VC JSON Schema Implementation
+## Running
 
-## Local
-### Building
-
-Assuming you have [go](https://go.dev/) installed...
+To run the validator, use the following command structure:
 
 ```bash
-go build ./...
+./sample-vc-validator validate --input  --config '' --output 
 ```
 
-Which will produce a binary called `vc-json-schema-test-suite`
-
-### Running
-
-Select format, schema, credential, and output files and run as follows:
+For example:
 
 ```bash
- ./vc-json-schema-test-suite validate --format JsonSchema --schema ../../tests/input/test-1-schema.json --credential ../../tests/input/test-1-credential.json --output ../../tests/output/tests-1-output.json```
- ```
+./sample-vc-validator validate \
+  --input ../../tests/input/valid-credential.json \
+  --config '{"check":"identifier"}' \
+  --output ../../tests/output/1-sample-impl.json
+```
 
 ## Docker
+
 ### Building
 
+To build the Docker image:
+
+```bash
+docker build -t sample-vc-validator .
+```
+
 ### Running
+
+To run the validator using Docker:
+
+```bash
+docker run -v $(pwd)/tests:/tests sample-vc-validator validate \
+  --input /tests/input/valid-credential.json \
+  --config '{"check":"identifier"}' \
+  --output /tests/output/1-sample-impl.json
+```
+
+Make sure to mount the appropriate directories for input and output files.

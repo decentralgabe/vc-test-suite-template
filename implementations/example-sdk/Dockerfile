@@ -1,17 +1,30 @@
-FROM golang:1.21-alpine
+# Use the official Golang image to create a build artifact.
+FROM golang:1.22 as builder
 
-# Set destination for COPY
+# Set the working directory inside the container
 WORKDIR /app
 
-# Download Go modules
-COPY go.mod .
-COPY go.sum .
+# Copy go mod and sum files
+COPY go.mod go.sum ./
+
+# Download all dependencies
 RUN go mod download
 
-# Copy the source code
-COPY *.go ./
+# Copy the source from the current directory to the working Directory inside the container
+COPY . .
 
-# Build executable
-RUN go build -tags jwx_es256k -o /example-sdk .
+# Build the Go app
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o sample-vc-validator .
 
-ENTRYPOINT ["/example-sdk"]
+# Use a Docker multi-stage build to create a lean production image.
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /root/
+
+# Copy the pre-built binary file from the previous stage
+COPY --from=builder /app/sample-vc-validator .
+
+# Command to run the executable
+ENTRYPOINT ["./sample-vc-validator"]

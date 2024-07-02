@@ -1,9 +1,7 @@
-version: "3.9"
+version: '3.9'
 services:
-  example-sdk:
-    image: example/example-sdk
-    build:
-      context: example-sdk
-      dockerfile: Dockerfile
+  sample:
+    build: ./sample
     volumes:
-      - ../tests:/tests
+      - ./tests/input:/tests/input
+      - ./tests/output:/tests/output

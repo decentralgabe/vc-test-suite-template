@@ -1,65 +1,53 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
-
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"github.com/TBD54566975/ssi-sdk/credential"
 )
 
 func main() {
-	if len(os.Args) < 5 {
-		logrus.Fatal("Not enough arguments.")
+	if len(os.Args) < 3 {
+		panic("must supply [input, config, output] arguments")
 	}
 
-	format := os.Args[2]
-	schemaPath := os.Args[4]
-	credentialPath := os.Args[6]
-	outputPath := os.Args[7]
+	var input, config, output string
 
-	schema, err := loadFile(schemaPath)
-	if err != nil {
-		logrus.Fatal(errors.Wrap(err, "loading schema"))
-	}
+	validateCmd := flag.NewFlagSet("validate", flag.ExitOnError)
+	validateCmd.StringVar(&input, "input", "", "input credential file")
+	validateCmd.StringVar(&config, "config", "", "validation config")
+	validateCmd.StringVar(&output, "output", "", "output file")
 
-	credential, err := loadFile(credentialPath)
-	if err != nil {
-		logrus.Fatal(errors.Wrap(err, "loading credential"))
-	}
-
-	// Perform validation (dummy validation in this example)
-	if format == "JsonSchema" {
-		if validateJSONSchema(schema, credential) {
-			writeResult(outputPath, "success")
-		} else {
-			writeResult(outputPath, "error")
+	switch os.Args[1] {
+	case "validate":
+		if err := validateCmd.Parse(os.Args[2:]); err != nil {
+			fmt.Printf("error parsing flags: %s\n", err.Error())
+			os.Exit(1)
 		}
-	} else {
-		logrus.Fatal("Unsupported format.")
+		fmt.Printf("flags parsed: input=%s, config=%s, output=%s\n", input, config, output)
+		validateFlags(input, config, output)
+		if err := ValidateCredential(input, config, output); err != nil {
+			fmt.Printf("error validating credential: %s\n", err.Error())
+			os.Exit(1)
+		}
+		fmt.Println("credential validated; output written to file")
+	default:
+		fmt.Println("expected 'validate' command")
+		os.Exit(1)
 	}
 }
 
-func loadFile(path string) ([]byte, error) {
-	return ioutil.ReadFile(path)
-}
-
-func validateJSONSchema(schema, credential []byte) bool {
-	// Dummy validation logic
-	return true
-}
-
-func writeResult(path, result string) {
-	f, err := os.Create(path)
-	if err != nil {
-		logrus.Fatal(errors.Wrap(err, "creating result file"))
+func validateFlags(input, config, output string) {
+	if input == "" {
+		fmt.Println("no input file specified")
+		os.Exit(1)
 	}
-	defer f.Close()
-	_, err = f.WriteString(result)
-	if err != nil {
-		logrus.Fatal(errors.Wrap(err, "writing result"))
+	if config == "" {
+		fmt.Println("no config specified")
+		os.Exit(1)
 	}
-	fmt.Println("Result written to", path)
+	if output == "" {
+		fmt.Println("no output file specified")
+		os.Exit(1)
+	}
 }

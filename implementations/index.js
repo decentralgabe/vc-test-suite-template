@@ -1,46 +1,23 @@
-import {createRequire} from 'node:module';
+import fs from 'fs';
 
-const require = createRequire(import.meta.url);
-const requireDir = require('require-dir');
-const dir = requireDir('./');
+const implementationsFile = './implementations/implementations.json';
 
-export const implementations = Object.values(dir);
+/**
+ * implementationsWithFeatures returns a list of implementations that have features
+ * @return {*}
+ */
+export function implementationsWithFeatures() {
+  const implementations = JSON.parse(fs.readFileSync(implementationsFile, 'utf8'));
+  return implementations.filter((impl) => impl.features && Object.keys(impl.features).length > 0);
+}
 
-export const JsonSchemaVersions = {
-  202012: '2020-12',
-  201909: '2019-09',
-  Draft7: 'Draft-7',
-};
-
-export const VcJsonSchemaTypes = {
-  JsonSchema: 'JsonSchema',
-  JsonSchemaCredential: 'JsonSchemaCredential',
-};
-
-export const implementationsWhichSupportVersionAndType = ({
-  impls = implementations,
-  version,
-  type,
-}) => {
-  const matchingImpls = [];
-  for (const i of impls) {
-    if (Object.keys(i.specs).includes(version) && i.specs[version].includes(type)) {
-      matchingImpls.push(i);
-    }
-  }
-  return matchingImpls;
-};
-
-// New function for credentials
-export const implementationsWhichSupportCredential = ({
-  impls = implementations,
-  specification,
-}) => {
-  const matchingImpls = [];
-  for (const i of impls) {
-    if (i.supportedSpecs && i.supportedSpecs.includes(specification)) {
-      matchingImpls.push(i);
-    }
-  }
-  return matchingImpls;
-};
+/**
+ * getImplementationFeatures returns the features for a given implementation
+ * @param {string} implName
+ * @return {{inspector: boolean, debug: boolean, uv: boolean, ipv6: boolean, tls_alpn: boolean, tls_sni: boolean, tls_ocsp: boolean, tls: boolean}|{}}
+ */
+export function getImplementationFeatures(implName) {
+  const implementations = JSON.parse(fs.readFileSync(implementationsFile, 'utf8'));
+  const impl = implementations.find((i) => i.name === implName);
+  return impl ? impl.features : {};
+}
