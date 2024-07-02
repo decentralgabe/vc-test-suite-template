@@ -1,7 +1,6 @@
 # Use the official Golang image to create a build artifact.
 FROM golang:1.22 as builder
 
-# Set the working directory inside the container
 WORKDIR /app
 
 # Copy go mod and sum files
@@ -14,17 +13,26 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o example-sdk .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o example-server .
 
 # Use a Docker multi-stage build to create a lean production image.
 FROM alpine:latest
 
-RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates curl jq bash
 
 WORKDIR /root/
 
 # Copy the pre-built binary file from the previous stage
-COPY --from=builder /app/example-sdk .
+COPY --from=builder /app/example-server .
+
+# Copy the test script
+COPY cli.sh .
+
+# Make the test script executable
+RUN chmod +x cli.sh
+
+# Expose port 8080
+EXPOSE 8080
 
 # Command to run the executable
-ENTRYPOINT ["./example-sdk"]
+CMD ["./example-server"]

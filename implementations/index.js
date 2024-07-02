@@ -2,6 +2,10 @@ import fs from 'fs';
 
 const implementationsFile = './implementations/implementations.json';
 
+/**
+ * Get implementations with features.
+ * @return {*|(*&{name: *})[]|*[]}
+ */
 export function implementationsWithFeatures() {
   console.log('Reading implementations file:', implementationsFile);
   let implementationsData;
@@ -34,6 +38,11 @@ export function implementationsWithFeatures() {
   return [];
 }
 
+/**
+ * Get implementation features.
+ * @param {string} implName
+ * @return {{inspector: boolean, debug: boolean, uv: boolean, ipv6: boolean, tls_alpn: boolean, tls_sni: boolean, tls_ocsp: boolean, tls: boolean}|{}}
+ */
 export function getImplementationFeatures(implName) {
   console.log('Getting features for implementation:', implName);
   const implementationsData = JSON.parse(fs.readFileSync(implementationsFile, 'utf8'));
