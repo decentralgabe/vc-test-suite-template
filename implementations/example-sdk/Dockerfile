@@ -14,4 +14,4 @@ COPY *.go ./
 # Build executable
 RUN go build -tags jwx_es256k -o /example-sdk .
 
-ENTRYPOINT ["/tbd"]
+ENTRYPOINT ["/example-sdk"]

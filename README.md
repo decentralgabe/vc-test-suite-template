@@ -37,7 +37,7 @@ An example command for a container that takes the above inputs would be:
 ```bash
 docker-compose -f ./implementations/docker-compose.yml \
  run -d example-sdk validate \
- --format JsonSchemaCredential \
+ --color red \
  --schema /tests/input/jsonschemacredential/Draft-7/11-schema.json \
  --credential /tests/input/jsonschemacredential/Draft-7/1-credential.json \
  --output /tests/output/jsonschemacredential/Draft-7/18-example-sdk.json
@@ -46,25 +46,20 @@ docker-compose -f ./implementations/docker-compose.yml \
 ### Adding an Implementation
 
 To add an implementation to the test suite, add a new entry to the `implementations` array in `implementations.json`.
-The entry should have the following properties: `name` and `specs`, where `specs` is an object with the supported
-[JSON Schema versions](https://json-schema.org/) as keys and an array of supported
-[VC JSON Schema Types](https://w3c.github.io/vc-json-schema/#data-model) as values.
+The entry should have the following properties: `name` and `config`, where `config` is an object with the supported
+config types as keys (in our example key values are color) and an array of supported values for that config type.
 
 ```json
 {
   "name": "sample",
-  "specs": {
-    "2020-12": [
-      "JsonSchema",
-      "JsonSchemaCredential"
+  "config": {
+    "red": [
+      "ruby",
+      "scarlet"
     ],
-    "2019-09": [
-      "JsonSchema",
-      "JsonSchemaCredential"
-    ],
-    "Draft-7": [
-      "JsonSchema",
-      "JsonSchemaCredential"
+    "blue": [
+      "sapphire",
+      "navy"
     ]
   }
 }

@@ -30,3 +30,17 @@ export const implementationsWhichSupportVersionAndType = ({
   }
   return matchingImpls;
 };
+
+// New function for credentials
+export const implementationsWhichSupportCredential = ({
+  impls = implementations,
+  specification,
+}) => {
+  const matchingImpls = [];
+  for (const i of impls) {
+    if (i.supportedSpecs && i.supportedSpecs.includes(specification)) {
+      matchingImpls.push(i);
+    }
+  }
+  return matchingImpls;
+};

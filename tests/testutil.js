@@ -1,23 +1,17 @@
 import * as fs from 'fs';
 import shell from 'shelljs';
-import {JsonSchemaCredentialTestMapping, JsonSchemaTestMapping, TestResult} from './testmapping.js';
+import {SampleTestMapping, TestResult} from './testmapping.js';
 
 /**
  * Generate test results for a given implementation by calling its docker container with specific inputs
+ *
  * @param{string} impl the implementation to test
- * @param{string} jsonSchemaVersion the version of JSON Schema to test
- * @param{string} jsonSchemaType the type (`JsonSchema` or `JsonSchemaCredential`) to test
+ * @param{string} config the config to test
  * @param{string} testName the test name to run
  * @return {Promise<void>} nothing
  */
-export async function generateTestResults(impl, jsonSchemaVersion, jsonSchemaType, testName) {
-  const schemaType = jsonSchemaType.toLowerCase();
-  const tests = () => {
-    if (jsonSchemaType === 'JsonSchemaCredential') {
-      return JsonSchemaCredentialTestMapping[testName];
-    }
-    return JsonSchemaTestMapping[testName];
-  };
+export async function generateTestResults(impl, config) {
+  const tests = SampleTestMapping[config];
 
   for (const test of tests()) {
     const testNumber = test.number;
@@ -30,9 +24,9 @@ docker-compose -f ./implementations/docker-compose.yml \
 run -d ${impl} \
 validate \
 --format ${jsonSchemaType} \
---schema /tests/input/${schemaType}/${jsonSchemaVersion}/${schemaFile} \
---credential /tests/input/${schemaType}/${jsonSchemaVersion}/${credentialFile} \
---output /tests/output/${schemaType}/${jsonSchemaVersion}/${outputFile}
+--schema /tests/input/${config}}/${schemaFile} \
+--credential /tests/input/${config}}/${credentialFile} \
+--output /tests/output/${config}}/${outputFile}
 `;
 
     console.log(`${command}`);
@@ -61,7 +55,7 @@ function sleep(ms) {
  * @param{string} testName the test name to check
  * @return {Promise<string>} the test result as one of {@link TestResult} or {@link TestResult.Error} if the test result file could not be read
  */
-export async function checkTestResults(impl, jsonSchemaVersion, jsonSchemaType, testName) {
+export async function checkTestResults(impl, config, testName) {
   const schemaType = jsonSchemaType.toLowerCase();
   const tests = () => {
     if (jsonSchemaType === 'JsonSchemaCredential') {

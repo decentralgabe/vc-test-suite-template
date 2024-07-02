@@ -1,21 +1,9 @@
 {
-  "$id": "https://example.com/schemas/bad.json",
-  "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "name": "EmailCredential",
-  "description": "bad $id",
+  "$id": "http://example.com/2-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Test schema",
   "type": "object",
   "properties": {
-    "credentialSubject": {
-      "type": "object",
-      "properties": {
-        "emailAddress": {
-          "type": "string",
-          "format": "email"
-        }
-      },
-      "required": [
-        "emailAddress"
-      ]
-    }
+    "name": { "type": "string" }
   }
 }
