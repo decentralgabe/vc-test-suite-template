@@ -9,7 +9,7 @@
   "example-server": {
     "features": {
       "identifier": true,
-      "type": true,
+      "type": false,
       "issuance_date": true
     }
   }

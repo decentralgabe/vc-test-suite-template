@@ -11,11 +11,11 @@ import {GenericTestMapping, TestResult} from './test-mapping.js';
 export async function generateTestResults(impl, testName) {
   const tests = GenericTestMapping[testName];
 
-  for (const test of tests) {
-    const testNumber = test.number;
-    const inputFile = test.input_file;
+  for (const testData of tests) {
+    const testNumber = testData.number;
+    const inputFile = testData.input_file;
     const outputFile = `${testNumber}-${impl}.json`;
-    const configString = JSON.stringify(test.config);
+    const configString = JSON.stringify(testData.config);
 
     const command = `
 docker-compose -f ./implementations/docker-compose.yml \
@@ -47,29 +47,27 @@ function sleep(ms) {
 /**
  * checkTestResults is a function that reads the output of the tests
  * @param {string} impl - The name of the implementation
- * @param {string} testName - The name of the test
+ * @param {Object} testData - Data associated with the test
  * @return {string} - The result of the test
  */
-export async function checkTestResults(impl, testName) {
-  const tests = GenericTestMapping[testName];
-
-  for (const test of tests) {
-    const outputFile = `./tests/output/${test.number}-${impl}.json`;
-    let jsonData;
-    try {
-      jsonData = await fs.readFileSync(outputFile);
-    } catch (err) {
-      if (err.code === 'ENOENT') {
-        console.log(`\nOutput file not found: ${outputFile}\n`);
-        return TestResult.skipped;
-      }
-      console.log(`\nError reading test result: ${err}\n`);
-      return TestResult.error;
+export async function checkTestResults(impl, testData) {
+  const outputFile = `./tests/output/${testData.number}-${impl}.json`;
+  try {
+    const jsonData = await fs.promises.readFile(outputFile, 'utf8');
+    const data = JSON.parse(jsonData);
+    // Map the result to match TestResult enum
+    switch (data.result) {
+      case 'success':
+        return TestResult.success;
+      case 'failure':
+        return TestResult.failure;
+      case 'indeterminate':
+        return TestResult.indeterminate;
+      default:
+        return TestResult.error;
     }
-    const data = await JSON.parse(jsonData);
-    if (TestResult[data.result] !== TestResult[test.expected_result]) {
-      return TestResult.error;
-    }
+  } catch (err) {
+    console.log(`\nError reading or parsing test result: ${err}\n`);
+    return TestResult.error;
   }
-  return TestResult.success;
 }
