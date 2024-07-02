@@ -33,38 +33,32 @@ func main() {
 }
 
 func handleValidate(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
 	if r.Method != http.MethodPost {
-		http.Error(w, "Only POST method is allowed", http.StatusMethodNotAllowed)
+		json.NewEncoder(w).Encode(ValidationResponse{Result: "failure"})
 		return
 	}
 
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
-		http.Error(w, "Failed to read request body", http.StatusBadRequest)
+		json.NewEncoder(w).Encode(ValidationResponse{Result: "failure"})
 		return
 	}
 
 	var req ValidationRequest
 	if err = json.Unmarshal(body, &req); err != nil {
-		http.Error(w, "Failed to parse request JSON", http.StatusBadRequest)
+		json.NewEncoder(w).Encode(ValidationResponse{Result: "failure"})
 		return
 	}
 
 	result, err := validateCredential(req.Credential, req.Config)
 	if err != nil {
-		http.Error(w, fmt.Sprintf("Validation error: %v", err), http.StatusBadRequest)
+		json.NewEncoder(w).Encode(ValidationResponse{Result: "failure"})
 		return
 	}
 
-	response := ValidationResponse{Result: result}
-	jsonResponse, err := json.Marshal(response)
-	if err != nil {
-		http.Error(w, "Failed to generate response", http.StatusInternalServerError)
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(jsonResponse)
+	json.NewEncoder(w).Encode(ValidationResponse{Result: result})
 }
 
 func validateCredential(credentialJSON, configJSON json.RawMessage) (ValidationResult, error) {

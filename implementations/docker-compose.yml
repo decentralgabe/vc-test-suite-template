@@ -7,8 +7,3 @@ services:
     build: ./example-server
     volumes:
       - ../tests:/tests
-    command: ["./cli.sh", "/tests/input/${INPUT_FILE}", "${CONFIG}", "/tests/output/${OUTPUT_FILE}"]
-    environment:
-      - INPUT_FILE
-      - CONFIG
-      - OUTPUT_FILE

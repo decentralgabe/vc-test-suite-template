@@ -25,9 +25,6 @@ describe('Generic Test Suite', function() {
 
       for (const [testName] of Object.entries(GenericTestMapping)) {
         it(testName, async function() {
-          // if (!i.features || !i.features[testName]) {
-          //   this.skip();
-          // }
           console.log(`Running test: ${testName} for implementation: ${i.name}`);
           await generateTestResults(i.name, testName);
           this.test.cell = {columnId: i.name, rowId: testName};

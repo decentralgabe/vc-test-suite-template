@@ -1,8 +1,15 @@
 {
+  "example-sdk": {
+    "features": {
+      "identifier": true,
+      "type": true,
+      "issuance_date": true
+    }
+  },
   "example-server": {
     "features": {
       "identifier": true,
-      "type": false,
+      "type": true,
       "issuance_date": true
     }
   }

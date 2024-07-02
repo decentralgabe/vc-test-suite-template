@@ -19,7 +19,7 @@ export async function generateTestResults(impl, testName) {
 
     const command = `
 docker-compose -f ./implementations/docker-compose.yml \
-run -d ${impl} \
+run --rm ${impl} \
 validate \
 --input /tests/input/${inputFile} \
 --config '${configString}' \
