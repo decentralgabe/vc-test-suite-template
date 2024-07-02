@@ -3,8 +3,12 @@ import fs from 'fs';
 const implementationsFile = './implementations/implementations.json';
 
 /**
- * Get implementations with features.
- * @return {*|(*&{name: *})[]|*[]}
+ * Retrieves a list of implementations with their features from a JSON file.
+ * Each implementation is expected to have a name and a set of features.
+ * Only implementations with at least one feature are returned.
+ *
+ * @return {Array<Object>} An array of implementation objects, each augmented with its name.
+ * If an error occurs during file reading or parsing, an empty array is returned.
  */
 export function implementationsWithFeatures() {
   let implementationsData;
@@ -22,9 +26,12 @@ export function implementationsWithFeatures() {
 }
 
 /**
- * Get implementation features.
- * @param {string} implName
- * @return {{inspector: boolean, debug: boolean, uv: boolean, ipv6: boolean, tls_alpn: boolean, tls_sni: boolean, tls_ocsp: boolean, tls: boolean}|{}}
+ * Retrieves the features of a specific implementation by name.
+ * The features are read from a JSON file specified by `implementationsFile`.
+ *
+ * @param {string} implName The name of the implementation to retrieve features for.
+ * @return {Object} An object containing the features of the specified implementation.
+ * If the implementation does not exist or an error occurs, an empty object is returned.
  */
 export function getImplementationFeatures(implName) {
   const implementationsData = JSON.parse(fs.readFileSync(implementationsFile, 'utf8'));
