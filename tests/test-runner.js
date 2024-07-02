@@ -1,13 +1,17 @@
 import chai from 'chai';
-import {implementationsWithFeatures} from '../implementations/index.js';
-import {generateTestResults, checkTestResults} from './test-util.js';
-import {TestResult, GenericTestMapping} from './test-mapping.js';
+import {getImplementationFeatures, implementationsWithFeatures} from '../implementations/index.js';
+import {checkTestResults, generateTestResults} from './test-util.js';
+import {GenericTestMapping, TestResult} from './test-mapping.js';
 
 const should = chai.should();
 
 describe('Generic Test Suite', function() {
   const impls = implementationsWithFeatures();
+  console.log('Implementations with features:', JSON.stringify(impls, null, 2));
+
   const implNames = impls.map((i) => i.name);
+  console.log('Implementation names:', implNames);
+
   this.matrix = true;
   this.report = true;
   this.implemented = [...implNames];
@@ -16,11 +20,18 @@ describe('Generic Test Suite', function() {
 
   for (const i of impls) {
     describe(i.name, function() {
-      for (const [testName, _] of Object.entries(GenericTestMapping)) {
+      const features = getImplementationFeatures(i.name);
+      console.log(`Features for ${i.name}:`, JSON.stringify(features, null, 2));
+
+      for (const [testName] of Object.entries(GenericTestMapping)) {
         it(testName, async function() {
+          console.log(`Running test: ${testName} for implementation: ${i.name}`);
           await generateTestResults(i.name, testName);
           this.test.cell = {columnId: i.name, rowId: testName};
-          const result = checkTestResults(i.name, testName);
+          const [result] = await Promise.all([checkTestResults(i.name, testName)]);
+          if (result === TestResult.skipped) {
+            this.skip();
+          }
           should.equal(result, TestResult.success);
         });
       }

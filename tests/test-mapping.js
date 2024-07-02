@@ -3,6 +3,7 @@ export const TestResult = {
   failure: 'failure',
   indeterminate: 'indeterminate',
   error: 'error',
+  skipped: 'skipped',
 };
 
 export const GenericTestMapping = {

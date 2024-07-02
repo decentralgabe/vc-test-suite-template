@@ -1,3 +1,3 @@
-module github.com/TBD54566975/vc-json-schema-test-suite
+module github.com/w3c/vc-test-suite-template
 
 go 1.22

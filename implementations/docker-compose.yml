@@ -1,7 +1,9 @@
-version: '3.9'
 services:
-  sample:
-    build: ./sample
+  example-sdk:
+    build: ./example-sdk
     volumes:
-      - ./tests/input:/tests/input
-      - ./tests/output:/tests/output
+      - ../tests:/tests
+  example-server:
+    build: ./example-sdk
+    volumes:
+      - ../tests:/tests

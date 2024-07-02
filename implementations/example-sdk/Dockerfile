@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o sample-vc-validator .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o sample-sdk .
 
 # Use a Docker multi-stage build to create a lean production image.
 FROM alpine:latest
@@ -24,7 +24,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 # Copy the pre-built binary file from the previous stage
-COPY --from=builder /app/sample-vc-validator .
+COPY --from=builder /app/sample-sdk .
 
 # Command to run the executable
-ENTRYPOINT ["./sample-vc-validator"]
+ENTRYPOINT ["./sample-sdk"]

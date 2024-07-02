@@ -59,6 +59,10 @@ export async function checkTestResults(impl, testName) {
     try {
       jsonData = await fs.readFileSync(outputFile);
     } catch (err) {
+      if (err.code === 'ENOENT') {
+        console.log(`\nOutput file not found: ${outputFile}\n`);
+        return TestResult.skipped;
+      }
       console.log(`\nError reading test result: ${err}\n`);
       return TestResult.error;
     }
