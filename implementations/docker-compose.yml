@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  tbd:
+    image: example/example-sdk
+    build:
+      context: example-sdk
+      dockerfile: Dockerfile
+    volumes:
+      - ../tests:/tests
