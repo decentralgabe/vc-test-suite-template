@@ -24,16 +24,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:b910ab3f-4818-4674-8c58-ae61771eb31f",
+              "_testId": "urn:uuid:25d73d6f-a1ea-481a-9df5-5403b76d3157",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 28449,
+                "_idleStart": 244,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -42,9 +42,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 1: The credential must have a valid identifier (Valid)"
               },
-              "duration": 28412,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 202,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'success'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "success",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -59,16 +67,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:6ace94cf-7dc9-4036-a2a2-1291dc826b82",
+              "_testId": "urn:uuid:184114ef-510d-430a-ae98-8bc0da80f2ab",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 29505,
+                "_idleStart": 444,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -77,9 +85,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 1: The credential must have a valid identifier (Invalid)"
               },
-              "duration": 1054,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 196,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'failure'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "failure",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -94,16 +110,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:d042f187-d277-4e13-b8b0-a53af1014372",
+              "_testId": "urn:uuid:158bcd7a-238b-4c9b-bb4a-2d2ad6363321",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 30565,
+                "_idleStart": 640,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -112,9 +128,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 2: The credential must have the correct type (Valid)"
               },
-              "duration": 1059,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 196,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'success'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "success",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -129,16 +153,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:9b3a92df-4eac-41c9-ac50-2366fe8e77b3",
+              "_testId": "urn:uuid:b629441d-1a89-49ff-86cf-8e0616f698a7",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 31652,
+                "_idleStart": 836,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -147,9 +171,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 2: The credential must have the correct type (Invalid)"
               },
-              "duration": 1087,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 195,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'failure'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "failure",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -164,16 +196,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:c5e3a053-cb15-4a69-9a4d-9374ca48c456",
+              "_testId": "urn:uuid:1b00192f-2533-4dac-aa9d-7ada7d22344f",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 32728,
+                "_idleStart": 1032,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -182,9 +214,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 3: The credential must have a valid issuance date (Valid)"
               },
-              "duration": 1075,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 195,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'success'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "success",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -199,16 +239,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "NtXWSvc92xYxKoBsro8bl",
+              "parent": "FXRt-xpE7YqzitDSWGc-g",
               "ctx": null,
-              "_testId": "urn:uuid:f9ec4a62-7673-4c68-a6f0-6c6b155ea32f",
+              "_testId": "urn:uuid:09c7eb77-489f-41c4-b282-3f0756a80de4",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 33774,
+                "_idleStart": 1228,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -217,9 +257,17 @@
                 "columnId": "example-sdk",
                 "rowId": "Requirement 3: The credential must have a valid issuance date (Invalid)"
               },
-              "duration": 1046,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 195,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'failure'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "failure",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             }
           ],
           "root": false,
@@ -235,9 +283,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "Bv49V6_zqpCUMi3B3jD7J",
+          "parent": "3krq-YoTKqA8v20tquhAH",
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "_testId": "urn:uuid:1d5c02be-3f4a-4f62-9424-63411cebfaeb"
+          "_testId": "urn:uuid:bd85a647-04d9-47dd-9615-15184881bfbd"
         },
         {
           "title": "example-server",
@@ -257,16 +305,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:0692cc39-459e-4c1f-9172-f979eba0eeb2",
+              "_testId": "urn:uuid:5b02cbca-0198-4f56-b8ea-195c23fb94a4",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 60861,
+                "_idleStart": 1423,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -275,9 +323,17 @@
                 "columnId": "example-server",
                 "rowId": "Requirement 1: The credential must have a valid identifier (Valid)"
               },
-              "duration": 27085,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 194,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'success'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "success",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -292,16 +348,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:7b99eea0-96a2-4f7f-88fb-64e4881ee51c",
+              "_testId": "urn:uuid:c86c6b97-e610-439f-87fe-9c257aaa7c81",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 63978,
+                "_idleStart": 1619,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -310,9 +366,17 @@
                 "columnId": "example-server",
                 "rowId": "Requirement 1: The credential must have a valid identifier (Invalid)"
               },
-              "duration": 3118,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 195,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'failure'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "failure",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -327,21 +391,21 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:6eea9e2d-bffa-4074-8e07-6d74338cd6b5",
+              "_testId": "urn:uuid:3115f7f7-1add-4b02-bdd4-2495abbf47d2",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 64130,
+                "_idleStart": 1771,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1,
+              "duration": 0,
               "state": "pending"
             },
             {
@@ -357,16 +421,16 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:2de763b4-fad3-4a9b-80de-bad6ad718c9a",
+              "_testId": "urn:uuid:967af5c8-9477-4aba-83a9-b2d44c337e3e",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 64130,
+                "_idleStart": 1771,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -387,16 +451,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:cbf4014a-994b-4848-ac00-c0ed2a47fc9a",
+              "_testId": "urn:uuid:f167ea2d-23e1-48bc-b6bc-5acd33a3eb7f",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 67075,
+                "_idleStart": 1814,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -405,9 +469,17 @@
                 "columnId": "example-server",
                 "rowId": "Requirement 3: The credential must have a valid issuance date (Valid)"
               },
-              "duration": 3095,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 195,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'success'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "success",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             },
             {
               "type": "test",
@@ -422,16 +494,16 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-              "parent": "G7XVPHzt7WMOyI6PdUMUY",
+              "parent": "XigzlPqWhCis8HngxSPvw",
               "ctx": null,
-              "_testId": "urn:uuid:e01d6570-0a0c-47bb-b652-7f7bf2671d5a",
+              "_testId": "urn:uuid:f4155a1f-0cd1-44a2-a54e-ecc6674ab010",
               "_events": {},
               "_eventsCount": 1,
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 70216,
+                "_idleStart": 2009,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -440,9 +512,17 @@
                 "columnId": "example-server",
                 "rowId": "Requirement 3: The credential must have a valid issuance date (Invalid)"
               },
-              "duration": 3140,
-              "state": "passed",
-              "speed": "slow"
+              "duration": 194,
+              "state": "failed",
+              "err": {
+                "name": "AssertionError",
+                "message": "expected 'error' to equal 'failure'",
+                "showDiff": true,
+                "actual": "error",
+                "expected": "failure",
+                "operator": "strictEqual",
+                "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+              }
             }
           ],
           "root": false,
@@ -458,9 +538,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "Bv49V6_zqpCUMi3B3jD7J",
+          "parent": "3krq-YoTKqA8v20tquhAH",
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "_testId": "urn:uuid:ee06e94e-fd36-458c-a6ca-bfbb24163c9c"
+          "_testId": "urn:uuid:6d87d1d8-5953-4d5f-a5d0-9853af0b8079"
         }
       ],
       "tests": [
@@ -477,16 +557,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:b910ab3f-4818-4674-8c58-ae61771eb31f",
+          "_testId": "urn:uuid:25d73d6f-a1ea-481a-9df5-5403b76d3157",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 28449,
+            "_idleStart": 244,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -495,9 +575,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 1: The credential must have a valid identifier (Valid)"
           },
-          "duration": 28412,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 202,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'success'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "success",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -512,16 +600,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:6ace94cf-7dc9-4036-a2a2-1291dc826b82",
+          "_testId": "urn:uuid:184114ef-510d-430a-ae98-8bc0da80f2ab",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 29505,
+            "_idleStart": 444,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -530,9 +618,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 1: The credential must have a valid identifier (Invalid)"
           },
-          "duration": 1054,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 196,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'failure'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "failure",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -547,16 +643,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:d042f187-d277-4e13-b8b0-a53af1014372",
+          "_testId": "urn:uuid:158bcd7a-238b-4c9b-bb4a-2d2ad6363321",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 30565,
+            "_idleStart": 640,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -565,9 +661,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 2: The credential must have the correct type (Valid)"
           },
-          "duration": 1059,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 196,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'success'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "success",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -582,16 +686,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:9b3a92df-4eac-41c9-ac50-2366fe8e77b3",
+          "_testId": "urn:uuid:b629441d-1a89-49ff-86cf-8e0616f698a7",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 31652,
+            "_idleStart": 836,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -600,9 +704,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 2: The credential must have the correct type (Invalid)"
           },
-          "duration": 1087,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 195,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'failure'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "failure",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -617,16 +729,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:c5e3a053-cb15-4a69-9a4d-9374ca48c456",
+          "_testId": "urn:uuid:1b00192f-2533-4dac-aa9d-7ada7d22344f",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 32728,
+            "_idleStart": 1032,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -635,9 +747,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 3: The credential must have a valid issuance date (Valid)"
           },
-          "duration": 1075,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 195,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'success'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "success",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -652,16 +772,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "NtXWSvc92xYxKoBsro8bl",
+          "parent": "FXRt-xpE7YqzitDSWGc-g",
           "ctx": null,
-          "_testId": "urn:uuid:f9ec4a62-7673-4c68-a6f0-6c6b155ea32f",
+          "_testId": "urn:uuid:09c7eb77-489f-41c4-b282-3f0756a80de4",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 33774,
+            "_idleStart": 1228,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -670,9 +790,17 @@
             "columnId": "example-sdk",
             "rowId": "Requirement 3: The credential must have a valid issuance date (Invalid)"
           },
-          "duration": 1046,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 195,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'failure'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "failure",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -687,16 +815,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:0692cc39-459e-4c1f-9172-f979eba0eeb2",
+          "_testId": "urn:uuid:5b02cbca-0198-4f56-b8ea-195c23fb94a4",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 60861,
+            "_idleStart": 1423,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -705,9 +833,17 @@
             "columnId": "example-server",
             "rowId": "Requirement 1: The credential must have a valid identifier (Valid)"
           },
-          "duration": 27085,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 194,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'success'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "success",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -722,16 +858,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:7b99eea0-96a2-4f7f-88fb-64e4881ee51c",
+          "_testId": "urn:uuid:c86c6b97-e610-439f-87fe-9c257aaa7c81",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 63978,
+            "_idleStart": 1619,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -740,9 +876,17 @@
             "columnId": "example-server",
             "rowId": "Requirement 1: The credential must have a valid identifier (Invalid)"
           },
-          "duration": 3118,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 195,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'failure'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "failure",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -757,21 +901,21 @@
           "_currentRetry": 0,
           "pending": true,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:6eea9e2d-bffa-4074-8e07-6d74338cd6b5",
+          "_testId": "urn:uuid:3115f7f7-1add-4b02-bdd4-2495abbf47d2",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 64130,
+            "_idleStart": 1771,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
           },
-          "duration": 1,
+          "duration": 0,
           "state": "pending"
         },
         {
@@ -787,16 +931,16 @@
           "_currentRetry": 0,
           "pending": true,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:2de763b4-fad3-4a9b-80de-bad6ad718c9a",
+          "_testId": "urn:uuid:967af5c8-9477-4aba-83a9-b2d44c337e3e",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 64130,
+            "_idleStart": 1771,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -817,16 +961,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:cbf4014a-994b-4848-ac00-c0ed2a47fc9a",
+          "_testId": "urn:uuid:f167ea2d-23e1-48bc-b6bc-5acd33a3eb7f",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 67075,
+            "_idleStart": 1814,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -835,9 +979,17 @@
             "columnId": "example-server",
             "rowId": "Requirement 3: The credential must have a valid issuance date (Valid)"
           },
-          "duration": 3095,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 195,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'success'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "success",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'success'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         },
         {
           "type": "test",
@@ -852,16 +1004,16 @@
           "_currentRetry": 0,
           "pending": false,
           "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
-          "parent": "G7XVPHzt7WMOyI6PdUMUY",
+          "parent": "XigzlPqWhCis8HngxSPvw",
           "ctx": null,
-          "_testId": "urn:uuid:e01d6570-0a0c-47bb-b652-7f7bf2671d5a",
+          "_testId": "urn:uuid:f4155a1f-0cd1-44a2-a54e-ecc6674ab010",
           "_events": {},
           "_eventsCount": 1,
           "timer": {
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 70216,
+            "_idleStart": 2009,
             "_onTimeout": null,
             "_repeat": null,
             "_destroyed": true
@@ -870,9 +1022,17 @@
             "columnId": "example-server",
             "rowId": "Requirement 3: The credential must have a valid issuance date (Invalid)"
           },
-          "duration": 3140,
-          "state": "passed",
-          "speed": "slow"
+          "duration": 194,
+          "state": "failed",
+          "err": {
+            "name": "AssertionError",
+            "message": "expected 'error' to equal 'failure'",
+            "showDiff": true,
+            "actual": "error",
+            "expected": "failure",
+            "operator": "strictEqual",
+            "stack": "AssertionError: expected 'error' to equal 'failure'\n    at should.equal (node_modules/chai/lib/chai/interface/should.js:98:35)\n    at Context.<anonymous> (file:///home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js:41:18)"
+          }
         }
       ],
       "root": false,
@@ -888,7 +1048,7 @@
       "_onlyTests": [],
       "_onlySuites": [],
       "delayed": false,
-      "parent": "s7Z89BMxkMQxDVXeBKOeE",
+      "parent": "U_Ow3JNeCMkONkTHZM_Mr",
       "file": "/home/runner/work/vc-test-suite-template/vc-test-suite-template/tests/test-runner.js",
       "matrix": true,
       "report": true,
@@ -898,7 +1058,7 @@
       ],
       "rowLabel": "Test Name",
       "columnLabel": "Implementation",
-      "_testId": "urn:uuid:1abb1e2b-8efd-4568-9c06-a08df1f9e6c0"
+      "_testId": "urn:uuid:c9ff4cb7-0163-4850-9358-a2b3453c6986"
     }
   ],
   "tests": [],
@@ -922,5 +1082,5 @@
     ]
   },
   "_eventsCount": 1,
-  "_testId": "urn:uuid:b2f4dc3b-6b99-4de5-854d-d5b8dfabcbe5"
+  "_testId": "urn:uuid:ee0dc6d5-e47b-47ac-b977-0719afc2d052"
 }
